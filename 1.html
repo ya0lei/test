@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 3000px;
+    }
+    li {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 200px;
+    }
+    .box2 {
+      background-color: #b50101;
+      /* top: 300px; */
+    }
+  </style>
+  <body>
+    <li>1</li>
+    <li class="box2">2</li>
+    <li>3</li>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // let box2 = document.querySelector(".box2");
+    // box2.addEventListener("click", () => {
+    //   box2.style.position = "absolute";
+    // });
+
+    ScrollTrigger.create({
+      trigger: ".box2",
+      start: "-=100",
+      end: "+=1000",
+      markers:true,
+      pin:true
+    });
+  </script>
+</html>
